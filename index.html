@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Alat Hitung Segitiga</h1>
+        <p class="header-paragraf">Temukan luas dan keliling segitiga dengan mudah menggunakan kalkulator kami.<span id="error-message" style="color: red;"></span></p>
+    </header>
+    <main>
+        <div class="content">
+            <div class="img-text">
+                <img src="assets/Untitled.png" alt="diagram segitiga dengan detail panjang sisi a, panjang sisi b, panjang sisi c, dan tinggi segitiga">
+                <div class="text">
+                    <ul>
+                      <li>
+                        <h6>Rumus luas:</h6>
+                        <p>  1/2 x a x t</p>
+                      </li>
+                      <li>
+                        <h6>Rumus keliling:</h6>
+                        <p>  a + b + c</p>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <form id="triangle-form">
+                <fieldset> 
+                    <legend>Panjang sisi dan tinggi segitiga</legend>
+                    <input type="number" id="panjang_a" placeholder="masukkan panjang sisi a">
+                    <input type="number" id="panjang_b" placeholder="masukkan panjang sisi b">
+                    <input type="number" id="panjang_c" placeholder="masukkan panjang sisi c">
+                    <input type="number" id="tinggi" placeholder="masukkan tinggi segitiga">
+                </fieldset>
+            </form>
+               <div class="hitung">
+                <button type="submit" id="hitung-luas-btn" onclick="hitungLuas()">Hitung luas</button>
+                <button type="submit" id="hitung-keliling-btn" onclick="hitungKeliling()">Hitung keliling</button>
+                </div>
+                <div class="reset">
+                <button type="button" id="reset-btn" onclick="reset()">Reset</button>
+               </div>
+            </div>
+            <div id="error-container">
+                <div class="alert">
+                    <img src="assets/red cross icon.png" alt="ikon tanda silang merah">
+                    <span class="message"> panjang sisi a dengan benar!</span>
+                </div>
+            </div>
+            <div class="result">
+            <div>
+                <h3>Hasil Perhitungan</h3>
+            </div>
+            <div class="luas-rslt">
+                <pre></pre>
+            </div>
+            <div class="keliling-rslt">
+                <pre></pre>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

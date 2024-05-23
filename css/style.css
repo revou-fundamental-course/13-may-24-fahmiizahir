@@ -1,0 +1,214 @@
+/* ini css */
+
+body {
+    background: linear-gradient(135deg, #4a90e2, #16222a);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 18px;
+    margin: 4px;
+}
+
+h1 {
+    padding-bottom: 0;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content {
+    width: 600px;
+    margin: auto;
+    background-color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+}
+
+.img-text {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+img {
+    width: 60%;
+    border-radius: 10px;
+}
+
+.text {
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 8px;
+}
+
+h6 {
+    font-size: large;
+    margin: 0;
+}
+
+form {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+fieldset {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #555;
+    box-shadow: 0 4px 6px rgba(0, 0.5, 0, 0.5);
+    border: none;
+}
+
+legend {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    margin: 4px;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: auto;
+    box-sizing: border-box;
+    background: white;
+    height: 2em;
+    box-shadow: 0 4px 6px rgba(0, 0.5, 0, 0.5);
+}
+
+.hitung {
+    display: flex;
+}
+
+button#hitung-keliling-btn, button#hitung-luas-btn {
+    background-color: #3498db; 
+    color: white;
+    border: none;
+    width: 50%;
+    border-radius: 25px;
+    border: none;
+    padding: 8px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.hitung button:hover {
+    background-color: #2980b9; 
+}
+
+.reset {
+    float: right;
+    margin-top: 12px;
+}
+
+.reset button {
+    background-color: #e74c3c;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.reset button {
+    background-color: #c0392b; 
+}
+
+#error-container {
+    display: none;
+    max-width: max-content;
+    margin:  auto; 
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    background-color: #fff; 
+    margin-bottom: 8px;
+}
+
+.alert {
+    display: flex; 
+    align-items: center;  
+}
+
+.alert img {
+    max-width: 24px; 
+    height: auto; 
+    margin-right: 10px;
+}
+
+.result {
+    display: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    height: auto;
+    width: 630px;
+    background: #333;
+    margin: auto;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.result div {
+    margin: 4px;
+    margin-bottom: 8px;
+}
+
+.luas-rslt, .keliling-rslt {
+    font-size: xx-large;
+    display: none;
+    padding: 4px;
+    background: white;
+    border-radius: 10px;
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+    background-color: lightgray;
+    padding: 4px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0.5, 0, 0.5);
+}
+
+@media only screen and (max-width: 650px) {
+    body {
+        width: max-content;
+        background: #254881;
+    }
+
+    .img-text {
+        display: grid;
+        place-items: center;
+    }
+    .img {
+        width: 100%;
+    }
+    .text {
+        width: 95%;
+        margin-top: 4px;
+    }
+}
