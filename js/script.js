@@ -1,3 +1,6 @@
+// script.js
+
+//ngambil elemen dari HTML
 var panjangAInput = document.getElementById('panjang_a');
 var panjangBInput = document.getElementById('panjang_b');
 var panjangCInput = document.getElementById('panjang_c');
@@ -6,6 +9,20 @@ var luasResultPre = document.querySelector('.luas-rslt pre');
 var kelilingResultPre = document.querySelector('.keliling-rslt pre');
 var errorContainer = document.getElementById('error-container');
 
+//auto scroll ke error message (untuk layar kecil)
+function scrollToError() {
+    var errorContainer = document.getElementById('error-container');
+    errorContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+//auto scroll ke result (untuk layar kecil)
+function scrollToResult() {
+    var resultSection = document.getElementById('result-section');
+    resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+
+//validasi input untuk ngitung luas
 function hitungLuas() {
     const panjang_a = parseFloat(panjangAInput.value);
     const tinggi = parseFloat(tinggiInput.value);
@@ -30,21 +47,24 @@ function hitungLuas() {
         return;
     }
 
-        errorContainer.style.display = 'none';
+    errorContainer.style.display = 'none';
     calculateArea(panjang_a, tinggi);
 }
 
+//ngitung luas segitiga
 function calculateArea(panjang_a, tinggi) {
     const luas = 0.5 * panjang_a * tinggi;
     luasResultPre.textContent = `
         Luas = 1/2 x a x t
              = 1/2 x ${panjang_a} x ${tinggi}
              = ${luas}`;
-    
+
     document.querySelector('.result').style.display = 'block';
     document.querySelector('.luas-rslt').style.display = 'block';
+    scrollToResult();
 }
 
+//validasi input untuk ngitung keliling
 function hitungKeliling() {
     const panjang_a = parseFloat(panjangAInput.value);
     const panjang_b = parseFloat(panjangBInput.value);
@@ -62,6 +82,7 @@ function hitungKeliling() {
     calculateKeliling(panjang_a, panjang_b, panjang_c);
 }
 
+//ngitung keliling segitiga
 function calculateKeliling(panjang_a, panjang_b, panjang_c) {
     const keliling = panjang_a + panjang_b + panjang_c;
     kelilingResultPre.textContent = `
@@ -71,14 +92,10 @@ function calculateKeliling(panjang_a, panjang_b, panjang_c) {
 
     document.querySelector('.result').style.display = 'block';
     document.querySelector('.keliling-rslt').style.display = 'block';
+    scrollToResult();
 }
 
-function showError(message) {
-    var alertDiv = document.querySelector('.alert');
-    alertDiv.querySelector('.message').textContent = message;
-    errorContainer.style.display = 'block';
-}
-
+//reset ke tampilan awal
 function reset() {
     panjangAInput.value = '';
     panjangBInput.value = '';
@@ -90,5 +107,13 @@ function reset() {
     document.querySelector('.result').style.display = 'none';
     document.querySelector('.luas-rslt').style.display = 'none';
     document.querySelector('.keliling-rslt').style.display = 'none';
+}
+
+//nampilin error message
+function showError(message) {
+    var alertDiv = document.querySelector('.alert');
+    alertDiv.querySelector('.message').textContent = message;
+    errorContainer.style.display = 'block';
+    scrollToError();
 }
 

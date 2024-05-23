@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!--general title-->
     <header>
         <h1>Alat Hitung Segitiga</h1>
         <p class="header-paragraf">Temukan luas dan keliling segitiga dengan mudah menggunakan kalkulator kami.<span id="error-message" style="color: red;"></span></p>
     </header>
-    <main>
-        <div class="content">
+    <section>
+        <!--main content-->
+        <div class="main">
+            <!--triangle image and formula-->
             <div class="img-text">
                 <img src="assets/Untitled.png" alt="diagram segitiga dengan detail panjang sisi a, panjang sisi b, panjang sisi c, dan tinggi segitiga">
                 <div class="text">
@@ -28,6 +31,7 @@
                     </ul>
                 </div>
             </div>
+            <!--triangle data input-->
             <form id="triangle-form">
                 <fieldset> 
                     <legend>Panjang sisi dan tinggi segitiga</legend>
@@ -37,32 +41,35 @@
                     <input type="number" id="tinggi" placeholder="masukkan tinggi segitiga">
                 </fieldset>
             </form>
-               <div class="hitung">
+            <!--calculting tools-->
+            <div class="hitung">
                 <button type="submit" id="hitung-luas-btn" onclick="hitungLuas()">Hitung luas</button>
                 <button type="submit" id="hitung-keliling-btn" onclick="hitungKeliling()">Hitung keliling</button>
-                </div>
-                <div class="reset">
+            </div>
+            <div class="reset">
                 <button type="button" id="reset-btn" onclick="reset()">Reset</button>
-               </div>
             </div>
-            <div id="error-container">
-                <div class="alert">
-                    <img src="assets/red cross icon.png" alt="ikon tanda silang merah">
-                    <span class="message"> panjang sisi a dengan benar!</span>
-                </div>
+        </div>
+        <!--error message-->
+        <div id="error-container">
+            <div class="alert">
+                <img src="assets/red cross icon.png" alt="ikon tanda silang merah">
+                <span class="message"> panjang sisi a dengan benar!</span>
             </div>
-            <div class="result">
+        </div>
+        <!--calculation result-->
+        <div class="result" id="result-section">
             <div>
                 <h3>Hasil Perhitungan</h3>
             </div>
-            <div class="luas-rslt">
+            <div class="luas-rslt"><!--area calculation result-->
                 <pre></pre>
             </div>
-            <div class="keliling-rslt">
+            <div class="keliling-rslt"><!--perimeter calculation result-->
                 <pre></pre>
             </div>
         </div>
-    </main>
+    </section>
     <script src="js/script.js"></script>
 </body>
 </html>
