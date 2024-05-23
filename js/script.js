@@ -13,7 +13,16 @@ function hitungLuas() {
     if ((panjang_a === "" || isNaN(panjang_a)) && (tinggi === "" || isNaN(tinggi))) {
         showError('Masukkan panjang sisi a dan tinggi segitiga dengan benar!');
         return;
-    } else if (panjang_a === "" || isNaN(panjang_a)) {
+    } else if (panjang_a < 0 || tinggi < 0) {
+        showError('Masukkan angka positif untuk panjang sisi a dan tinggi segitiga');
+        return;
+    }   else if (tinggi === "" || isNaN(tinggi)) {
+        showError('Isi tinggi segitiga dengan benar!');
+        return;
+    } else if (tinggi <= 0) {
+        showError('Masukkan angka positif untuk tinggi segitiga');
+        return;
+    }else if (panjang_a === "" || isNaN(panjang_a)) {
         showError('Isi panjang sisi a dengan benar!');
         return;
     } else if (panjang_a <= 0) {
@@ -21,20 +30,7 @@ function hitungLuas() {
         return;
     }
 
-    if (tinggi === "" || isNaN(tinggi)) {
-        showError('Isi tinggi segitiga dengan benar!');
-        return;
-    } else if (tinggi <= 0) {
-        showError('Masukkan angka positif untuk tinggi segitiga');
-        return;
-    }
-
-    if (panjang_a < 0 || tinggi < 0) {
-        showError('Masukkan angka positif untuk panjang sisi a dan tinggi segitiga');
-        return;
-    }
-
-    errorContainer.style.display = 'none';
+        errorContainer.style.display = 'none';
     calculateArea(panjang_a, tinggi);
 }
 
