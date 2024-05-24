@@ -117,3 +117,19 @@ function showError(message) {
     scrollToError();
 }
 
+//tampilan responsive
+function adjustButtonWidth() {
+    if (window.innerWidth <= 650) {
+        const kelilingButtonWidth = document.getElementById("hitung-keliling-btn").offsetWidth;
+        document.getElementById("hitung-luas-btn").style.width = kelilingButtonWidth + "px";
+    } else {
+        //balikin ke tampilan default klo layar >650px
+        document.getElementById("hitung-luas-btn").style.width = '50%';
+    }
+}
+
+// Jalanin fungsi saat halaman dimuat dan saat terjadi perubahan ukuran layar
+window.addEventListener('load', adjustButtonWidth);
+window.addEventListener('resize', adjustButtonWidth);
+
+
