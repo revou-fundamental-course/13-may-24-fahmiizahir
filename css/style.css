@@ -224,7 +224,7 @@ pre {
     }
 
     .main {
-        width: 80%; 
+        width: 85%; 
         margin: auto ;
         margin-bottom: 8px;
     }
@@ -265,6 +265,13 @@ pre {
         margin: auto;
     } 
 
+    input {
+        padding: 6.5%;
+        margin-right: auto;
+        margin-top:18px;
+        width: 95%;
+    }
+
     .hitung {
         display: block;
     }
@@ -272,15 +279,27 @@ pre {
     button#hitung-keliling-btn {
         width: max-content;
         margin: 0;
-        border-radius: 15px;
+        border-radius: 20px;
+        padding: 15px
+    }
+
+    button#hitung-luas-btn {
+        padding: 15px;
+        border-radius: 20px;
     }
 
     .reset {
         margin-top: 0;
     }
 
+    .reset button {
+        padding: 15px;
+        border-radius:20px
+    }
+
     .result {
         width: 85%;
     }
 }
+
 
