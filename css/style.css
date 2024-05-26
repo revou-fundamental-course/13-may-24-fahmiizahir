@@ -210,6 +210,7 @@ pre {
     body {
         width: max-content;
         background: #254881;
+        overflow-x: hidden;
     }
 
     #header {
@@ -224,9 +225,10 @@ pre {
     }
 
     .main {
-        width: 85%; 
+        max-width: 85%; 
         margin: auto ;
         margin-bottom: 8px;
+        overflow-y: auto;
     }
 
     .img-text {
@@ -276,16 +278,10 @@ pre {
         display: block;
     }
 
-    button#hitung-keliling-btn {
-        width: max-content;
-        margin: 0;
+    button#hitung-keliling-btn, button#hitung-luas-btn {
+        width: 20%;
         border-radius: 20px;
-        padding: 15px
-    }
-
-    button#hitung-luas-btn {
-        padding: 15px;
-        border-radius: 20px;
+        padding: 10px;
     }
 
     .reset {
@@ -293,8 +289,8 @@ pre {
     }
 
     .reset button {
-        padding: 15px;
-        border-radius:20px
+        padding: 10px;
+        border-radius: 17px;
     }
 
     .result {
